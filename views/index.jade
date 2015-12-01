@@ -6,6 +6,8 @@ html
     link(href='/vendor/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
     link(href='/vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet')
     link(href='/vendor/bootstrap-social/bootstrap-social.css', rel='stylesheet')
+    script(src='/vendor/angular/angular.js')
+    script(src='/vendor/angular-ui-router/release/angular-ui-router.min.js')
     link(href='/css/style.css', rel='stylesheet')
   body(ng-app='socialLogin')
     //- div(ng-controller='navCtrl')
@@ -39,8 +41,6 @@ html
     ui-view
 
     script(src='/vendor/jquery/dist/jquery.min.js')
-    script(src='/vendor/angular/angular.js')
-    script(src='/vendor/angular-ui-router/release/angular-ui-router.min.js')
     script(src='/vendor/satellizer/satellizer.min.js')
     script(src='/js/module.js')
     script(src='/js/controllers/login.js')

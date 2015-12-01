@@ -24,6 +24,7 @@
   "homepage": "https://github.com/CodingHouseFI/social-login#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
+    "bower": "^1.6.8",
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "jwt-simple": "^0.3.1",
