@@ -29,3 +29,7 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider) {
 
     // });
 });
+
+// app.service('svc', function($scope, $http){
+//   console.log('inside svc');
+// });

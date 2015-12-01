@@ -18,6 +18,24 @@ html
     //-     button(ui-sref='profile') profile
     //-     button(ng-click='logout()') logout
 
+    nav.navbar.navbar-inverse(ng-controller='navCtrl')
+      .container-fluid
+        div(ng-if='isAuthenticated()')
+          ul.nav.navbar-nav
+            li
+              a(ui-sref='home') Home
+            li
+              a(ui-sref='') Users
+          ul.nav.navbar-nav.navbar-right
+            li
+              img.avatar(ng-src="{{user.picture}}")
+            li
+              a {{user.displayName}}
+            li
+              a(ng-click='logout()')
+                span.glyphicon.glyphicon-log-out
+                |  Log out
+
     ui-view
 
     script(src='vendor/jquery/dist/jquery.min.js')
