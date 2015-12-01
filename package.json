@@ -1,0 +1,32 @@
+{
+  "name": "socialLogin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "setup": "rm -rf public/vendor node_modules && npm i && bower i",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingHouseFI/social-login.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodingHouseFI/social-login/issues"
+  },
+  "homepage": "https://github.com/CodingHouseFI/social-login#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "jwt-simple": "^0.3.1",
+    "moment": "^2.10.6",
+    "mongoose": "^4.2.8",
+    "morgan": "^1.6.1",
+    "querystring": "^0.2.0",
+    "request": "^2.67.0"
+  }
+}
