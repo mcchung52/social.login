@@ -2,7 +2,7 @@ doctype html(lang='en')
 html
   head
     meta(charset='UTF-8')
-    title Chat Me Up
+    title OAuth Login
     link(href='/vendor/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
     link(href='/vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet')
     link(href='/vendor/bootstrap-social/bootstrap-social.css', rel='stylesheet')
@@ -22,6 +22,14 @@ html
 
     nav.navbar.navbar-inverse(ng-controller='navCtrl' ng-cloak)
       .container-fluid
+        div(ng-if='!isAuthenticated() && showRegister')
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(ui-sref='register') Register
+        div(ng-if='!isAuthenticated() && !showRegister')
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(ui-sref='login') Login
         div(ng-if='isAuthenticated()')
           ul.nav.navbar-nav
             li
@@ -47,3 +55,4 @@ html
     script(src='/js/controllers/home.js')
     script(src='/js/controllers/profile.js')
     script(src='/js/controllers/nav.js')
+    script(src='/js/controllers/register.js')

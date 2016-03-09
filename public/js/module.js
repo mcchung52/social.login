@@ -1,7 +1,9 @@
 'use strict';
 
 let app = angular.module('socialLogin', ['satellizer', 'ui.router']);
-
+app.run(function($rootScope) {
+    $rootScope.showRegister = false; //login on init will toggle this
+});
 app.config(function($stateProvider, $urlRouterProvider, $authProvider) {
   $urlRouterProvider.otherwise('/login');
   $stateProvider
@@ -14,6 +16,9 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider) {
     .state('profile', { url: '/profile', 
                         templateUrl: 'partials/profile.html', 
                         controller: 'profileCtrl'})
+    .state('register', { url: '/register', 
+                        templateUrl: 'partials/register.html', 
+                        controller: 'registerCtrl'})
 
     $authProvider.github({
       clientId: '1ce6d56f447ab635cfde'
