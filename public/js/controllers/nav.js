@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('socialLogin')
-.controller('navCtrl', function($scope, $auth, $state) {
+.controller('navCtrl', ['$scope','$auth','$state', function($scope, $auth, $state) {
   
   $scope.isAuthenticated = function(){
     return $auth.isAuthenticated();
@@ -12,4 +12,4 @@ angular.module('socialLogin')
     $state.go('login');
   };
 
-});
+}]);

@@ -1,9 +1,7 @@
 {
   "name": "socialLogin",
   "version": "0.0.0",
-  "authors": [
-    "Cade Nichols <cade@cadenichols.com>"
-  ],
+  "authors": "",
   "license": "MIT",
   "ignore": [
     "**/.*",

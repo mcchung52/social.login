@@ -20,7 +20,7 @@ html
     //-     button(ui-sref='profile') profile
     //-     button(ng-click='logout()') logout
 
-    nav.navbar.navbar-inverse(ng-controller='navCtrl')
+    nav.navbar.navbar-inverse(ng-controller='navCtrl' ng-cloak)
       .container-fluid
         div(ng-if='isAuthenticated()')
           ul.nav.navbar-nav

@@ -26,7 +26,8 @@ router.post('/github', function(req, res) {
     client_secret: process.env.GITHUB_SECRET,
     redirect_uri: req.body.redirectUri
   };
-
+  console.log('params', params);
+  console.log('req.body',req.body);
   // Step 1. Exchange authorization code for access token.
   request.get({ url: accessTokenUrl, qs: params }, function(err, response, accessToken) {
     accessToken = qs.parse(accessToken);
@@ -103,12 +104,13 @@ router.post('/google', function(req, res) {
     redirect_uri: req.body.redirectUri,
     grant_type: 'authorization_code'
   };
-
+  console.log('params', params);
+  console.log('req.body',req.body);
   // Step 1. Exchange authorization code for access token.
   request.post(accessTokenUrl, { json: true, form: params }, function(err, response, token) {
     var accessToken = token.access_token;
     var headers = { Authorization: 'Bearer ' + accessToken };
-
+    console.log('accesstoken',accessToken);
     // Step 2. Retrieve profile information about the current user.
     request.get({ url: peopleApiUrl, headers: headers, json: true }, function(err, response, profile) {
       console.log('google profile:', profile);
@@ -171,7 +173,8 @@ router.post('/facebook', function(req, res) {
     client_secret: process.env.FACEBOOK_SECRET,
     redirect_uri: req.body.redirectUri
   };
-
+  // console.log('params', params);
+  // console.log('req.body',req.body);
   // Step 1. Exchange authorization code for access token.
   request.get({ url: accessTokenUrl, qs: params, json: true }, function(err, response, accessToken) {
     if (response.statusCode !== 200) {

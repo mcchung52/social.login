@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('socialLogin')
-.controller('loginCtrl', function($scope, $auth, $state) {
+.controller('loginCtrl', ['$scope','$auth','$state', function($scope, $auth, $state) {
 
   $scope.authenticate = function(provider) {
     $auth.authenticate(provider)
@@ -14,4 +14,4 @@ angular.module('socialLogin')
     });
   };
 
-});
+}]);
