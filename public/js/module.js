@@ -20,10 +20,9 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider) {
     });
     $authProvider.google({
       clientId: '666092791035-53g1b2n8s2bhn1sojaf5n49ofu32b8u7.apps.googleusercontent.com'
-      //redirectUri: 'http://localhost:3000'
     });
     $authProvider.facebook({
-      clientId: '1493282791002039'
+      clientId: '760544650716548'//'1493282791002039'
     });
 
     $authProvider.twitter();

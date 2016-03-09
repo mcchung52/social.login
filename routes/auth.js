@@ -169,7 +169,7 @@ router.post('/facebook', function(req, res) {
   var graphApiUrl = 'https://graph.facebook.com/v2.5/me?fields=' + fields.join(',');
   var params = {
     code: req.body.code,
-    client_id: req.body.clientId,
+    client_id: req.body.clientId, //App ID
     client_secret: process.env.FACEBOOK_SECRET,
     redirect_uri: req.body.redirectUri
   };
